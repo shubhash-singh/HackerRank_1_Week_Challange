@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Day3_Tower_Breaker {
+class Day_3_Tower_Breaker {
     public static int Winner(int height, int no)
     {
         if (no == 1 || height%2 == 0)
