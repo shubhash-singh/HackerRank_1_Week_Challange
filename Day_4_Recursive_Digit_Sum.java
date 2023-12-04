@@ -5,12 +5,10 @@ public class Day_4_Recursive_Digit_Sum {
     static void superDigit(String inpuString)
     {
         int sum = 0;
-        int x = Integer.parseInt(inpuString);
-        while(x!=0)
+        for (int i=0;i<inpuString.length();i++)
         {
-            int digit = x%10;
-            sum += digit;
-            x /= 10;
+            int digit = Character.getNumericValue(inpuString.charAt(i));
+            sum += digit; 
         }
         if (sum<10)
         {
@@ -24,8 +22,9 @@ public class Day_4_Recursive_Digit_Sum {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String n = sc.next();
-        int k = sc.nextInt();
+        String[] arr = sc.nextLine().split(" ");
+        String n = arr[0];
+        int k = Integer.parseInt(arr[1]);
         long initialSum = 0;
         
         for (int i=0;i<n.length();i++)
